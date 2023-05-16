@@ -95,19 +95,21 @@ class LinkedList {
         return false;
     }
 
-    //recursively doesnt work. looking into why
-    // contains(v){
-    
-    //     let current = this.head
-    //     if (!current){
-    //         return false;
-    //     }
-    //     if(current.value == v){
-    //         return true
-    //     }
-    //     return current.nextNode.contains(v)
+   // same but with recursion
+    containsRec(v){
         
-    // }
+        let self = this;
+        let current = self.head;
+        console.log(current)
+        if (!current){
+            return false;
+        }
+        if(current.value == v){
+            return true
+        }
+        return self.contains(v)
+        
+    }
 
     //returns the index of the node containing value, or null if not found
     find(v){
@@ -154,7 +156,7 @@ let list = new LinkedList(node1);
 
 
 
-console.log(list.toString())
+console.log(list.containsRec(2))
 
 
 // class ListNode {
