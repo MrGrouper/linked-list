@@ -137,7 +137,7 @@ class LinkedList {
     }
 }
 
-// Generate Test list
+// Generate Test list and output
 let node1 = new Node(1);
 let node2 = new Node(2);
 node1.nextNode = node2
@@ -151,31 +151,6 @@ let list = new LinkedList(node1);
 
 
 
-
-// function at(list, index)
-
+console.log(list.containsRec(1))
 
 
-console.log(list.containsRec(2))
-
-
-// class ListNode {
-//     constructor(data) {
-//         this.data = data
-//         this.next = null                
-//     }
-// }
-
-// class LinkedList {
-//     constructor(head = null) {
-//         this.head = head
-//     }
-// }
-
-// let node1 = new ListNode(2)
-// let node2 = new ListNode(5)
-// node1.next = node2
-
-// let list = new LinkedList(node1)
-
-// console.log(list.head.next.data) 
